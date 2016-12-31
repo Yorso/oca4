@@ -6,7 +6,7 @@ public class Explore {
 		try {
 			seeAnimals();
 			fall();
-			System.out.println("Esta linea nunca se ejecutará, fall() va a RuntimeException catch block y ya no volverá al bloque try");
+			System.out.println("Hi!!!"); //Esta linea nunca se ejecutará, fall() va a RuntimeException catch block y ya no volverá al bloque try
 		} catch (IndexOutOfBoundsException e) { //Nunca se ejecutará este catch
 			System.out.println("Nunca se ejecutará: IndexOutOfBoundsException catch block: " + e.toString()); 
 		} catch(RuntimeException e){
