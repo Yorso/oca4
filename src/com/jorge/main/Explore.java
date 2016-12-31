@@ -6,7 +6,7 @@ public class Explore {
 		try {
 			seeAnimals();
 			fall();
-			System.out.println("Hi!!!"); //Esta linea nunca se ejecutará, fall() va a RuntimeException catch block y ya no volverá al bloque try
+			System.out.println("Hi!!!");//Esta linea nunca se ejecutará, fall() va a RuntimeException catch block y ya no volverá al bloque try
 		} catch (IndexOutOfBoundsException e) { //Nunca se ejecutará este catch
 			System.out.println("Nunca se ejecutará: IndexOutOfBoundsException catch block: " + e.toString()); 
 		} catch(RuntimeException e){
@@ -23,6 +23,7 @@ public class Explore {
 	}
 	
 	private void fall(){ //Forzamos que se vaya al bloque catch, forzamos la exception con throw
+						 //Si no existiera el bloque catch RuntimeException o Esxception, daría otra excepción XD
 		System.out.println("Launching throw new RuntimeException");
 		throw new RuntimeException(); // Va a catch(RuntimeException e), no a catch (IndexOutOfBoundsException e)
 	}
